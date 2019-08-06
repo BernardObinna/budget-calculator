@@ -110,7 +110,25 @@
         <button v-on:click="change()">change</button> -->
     </div>
 
+    <div class="generated">
+      <h3 class="center">
+        Recommended budget for Mr {{client}}
+      </h3>
+      <div class="container">
+        <div v-for="category in categories" :key="index" class="row categoryCard">
+          <p class="col s12 l6 center">{{category.name}}</p>
+          <p class="col s12 l6 center">N{{category.amount}}</p>
+        </div>
 
+
+
+        <div class="row col s12 center">
+          <button class="btn-large waves-effect waves-light center submit" type="submit" name="action">
+            Regenerate
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
