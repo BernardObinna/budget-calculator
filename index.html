@@ -32,12 +32,12 @@
                 </ul> -->
       <!-- </div> -->
     </nav>
+    <h2 class="center">
+      A simple budget calculator just for you
+    </h2>
 
-    <div class="budgetForm">
+    <div v-if="!generated" class="budgetForm">
       <div class="container">
-        <h2 class="center">
-          A simple budget calculator just for you
-        </h2>
         <h3 class="center">
           Please fill the form below
         </h3>
@@ -110,7 +110,7 @@
         <button v-on:click="change()">change</button> -->
     </div>
 
-    <div class="generated">
+    <div v-else class="generated">
       <h3 class="center">
         Recommended budget for Mr {{client}}
       </h3>
