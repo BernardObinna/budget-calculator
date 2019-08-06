@@ -4,10 +4,18 @@
     padding: 0;
 }
 
-input,
-label {
-    font-size: 1.4em !important;
+.categoryCard {
+    //   background-color: #ac20a1;
+    padding: 20px;
+    margin: 40px;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px black;
+}
 
+input,
+label,
+p {
+    font-size: 1.4em !important;
 }
 
 form {
@@ -21,34 +29,40 @@ nav {
     // height: 30%;
     // padding
     min-height: 100px;
-    background-color: #AC20A1;
+    background-color: #ac20a1;
 }
 
 .submit {
-    color: #AC20A1;
+    color: #ac20a1;
     font-weight: bold;
     background-color: rgba(0, 0, 0, 0);
-    border: solid 1px #AC20A1;
+    border: solid 1px #ac20a1;
     border-radius: 6px;
-
 }
 
-
 .flipSwitch:checked+.lever::after {
-    background-color: #AC20A1 !important;
+    background-color: #ac20a1 !important;
 }
 
 .flipSwitch:checked+.lever {
     background-color: rgba(172, 32, 160, 0.6) !important;
 }
 
+input {
+    margin: 0 0 !important;
+    padding: 0 !important;
+}
 
-
-
+.flipper {
+    margin: 30px 0;
+}
 
 .submit:hover {
     color: white;
-    background-color: #AC20A1;
+    background-color: #ac20a1;
+}
 
-
+.submit:focus {
+    color: white;
+    background-color: #ac20a1;
 }
