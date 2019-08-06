@@ -6,7 +6,7 @@ var app = new Vue({
     // false on the status is single
     gender: false,
     // false on the gender is male
-    generated: false,
+    generated: true,
     client: "John wick",
     categories: [
       { name: "Groceries & Supplies", amount: 30000 },
