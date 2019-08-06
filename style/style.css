@@ -1,1 +1,33 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  min-height: 100px;
+  background-color: #AC20A1;
+}
+
+.submit {
+  color: #AC20A1;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0);
+  border: solid 1px #AC20A1;
+  border-radius: 6px;
+}
+
+.flipSwitch:checked + .lever::after {
+  background-color: #AC20A1 !important;
+}
+
+.flipSwitch:checked + .lever {
+  background-color: rgba(172, 32, 160, 0.6) !important;
+}
+
+.submit:hover {
+  color: white;
+  background-color: #AC20A1;
+}
+/*# sourceMappingURL=style.css.map */
