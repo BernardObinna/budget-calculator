@@ -40,6 +40,25 @@ var app = new Vue({
       console.log(this.status);
     },
 
+    generator: function() {
+      let temp_priority = [];
+      if (this.age < 30) {
+        this.priority.forEach((element, index) => {
+          temp_priority.push(element - 1);
+          index == 9 ? (temp_priority[index] += 10) : temp_priority;
+        });
+        this.priority = temp_priority;
+      }
+
+      this.calculator();
+    },
+
+    calculator: function() {
+      this.categories.forEach((element, index) => {
+        element.amount = (this.priority[index] / 100) * this.income;
+      });
+    },
+
     submit: function() {
       this.client = this.firstName + " " + this.lastName;
       !this.gender ? (this.sex = "Mr") : (this.sex = "Mrs");
