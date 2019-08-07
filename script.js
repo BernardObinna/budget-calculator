@@ -113,6 +113,60 @@ var app = new Vue({
         });
         this.priority = temp_priority;
       }
+      if (this.dependants > 2) {
+        this.priority.forEach((element, index) => {
+          temp_priority[index] = element - 1;
+
+          index == 0 ? (temp_priority[index] += 3) : temp_priority; //groceries
+          index == 1 ? (temp_priority[index] += 2) : temp_priority; //transport
+          index == 2 ? (temp_priority[index] += 0) : temp_priority; //bills
+          index == 3 ? (temp_priority[index] -= 1) : temp_priority; //health
+          index == 4 ? (temp_priority[index] += 2.3) : temp_priority; //housing
+          index == 5 ? (temp_priority[index] += 0) : temp_priority; //personal care
+          index == 6 ? (temp_priority[index] += 1) : temp_priority; //savings
+
+          index == 7 ? (temp_priority[index] += 1.5) : temp_priority; //family
+          index == 8 ? (temp_priority[index] += 1) : temp_priority; // misc
+          index == 9 ? (temp_priority[index] += 0) : temp_priority; //gadgets
+        });
+        this.priority = temp_priority;
+      }
+      if (this.dependants > 4) {
+        this.priority.forEach((element, index) => {
+          temp_priority[index] = element - 1;
+
+          index == 0 ? (temp_priority[index] += 1.5) : temp_priority; //groceries
+          index == 1 ? (temp_priority[index] += 2) : temp_priority; //transport
+          index == 2 ? (temp_priority[index] += 0.4) : temp_priority; //bills
+          index == 3 ? (temp_priority[index] -= 1) : temp_priority; //health
+          index == 4 ? (temp_priority[index] += 2.1) : temp_priority; //housing
+          index == 5 ? (temp_priority[index] += 0) : temp_priority; //personal care
+          index == 6 ? (temp_priority[index] += 1) : temp_priority; //savings
+
+          index == 7 ? (temp_priority[index] += 3) : temp_priority; //family
+          index == 8 ? (temp_priority[index] += 0.8) : temp_priority; // misc
+          index == 9 ? (temp_priority[index] += 0) : temp_priority; //gadgets
+        });
+        this.priority = temp_priority;
+      }
+      if (this.dependants > 6) {
+        this.priority.forEach((element, index) => {
+          temp_priority[index] = element - 1;
+
+          index == 0 ? (temp_priority[index] += 1) : temp_priority; //groceries
+          index == 1 ? (temp_priority[index] += 1) : temp_priority; //transport
+          index == 2 ? (temp_priority[index] += 0.4) : temp_priority; //bills
+          index == 3 ? (temp_priority[index] -= 1) : temp_priority; //health
+          index == 4 ? (temp_priority[index] += 2.1) : temp_priority; //housing
+          index == 5 ? (temp_priority[index] += 0) : temp_priority; //personal care
+          index == 6 ? (temp_priority[index] += 0) : temp_priority; //savings
+
+          index == 7 ? (temp_priority[index] += 6.3) : temp_priority; //family
+          index == 8 ? (temp_priority[index] += 0) : temp_priority; // misc
+          index == 9 ? (temp_priority[index] += 0) : temp_priority; //gadgets
+        });
+        this.priority = temp_priority;
+      }
 
       this.calculator();
     },
