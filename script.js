@@ -1,7 +1,6 @@
 var app = new Vue({
   el: "#app",
   data: {
-    message: "Hello Vue!",
     firstName: "",
     lastName: "",
     fullName: "",
@@ -35,11 +34,6 @@ var app = new Vue({
   },
 
   methods: {
-    change: function() {
-      this.message = "yooo";
-      // console.log(this.status);
-    },
-
     generator: function() {
       let temp_priority = [];
       if (this.age < 30) {
@@ -52,7 +46,6 @@ var app = new Vue({
           index == 4 ? (temp_priority[index] += 1) : temp_priority; //housing
           index == 5 ? (temp_priority[index] += 2.5) : temp_priority; //personal care
           index == 6 ? (temp_priority[index] += 1.5) : temp_priority; //savings
-
           index == 7 ? (temp_priority[index] -= 2) : temp_priority; //family
           index == 8 ? (temp_priority[index] += 3) : temp_priority; // misc
           index == 9 ? (temp_priority[index] += 6) : temp_priority; //gadgets
@@ -70,7 +63,6 @@ var app = new Vue({
           index == 4 ? (temp_priority[index] += 2.6) : temp_priority; //housing
           index == 5 ? (temp_priority[index] += 0.5) : temp_priority; //personal care
           index == 6 ? (temp_priority[index] += 2.6) : temp_priority; //savings
-
           index == 7 ? (temp_priority[index] -= 2.3) : temp_priority; //family
           index == 8 ? (temp_priority[index] += 2) : temp_priority; // misc
           index == 9 ? (temp_priority[index] += 1) : temp_priority; //gadgets
@@ -88,7 +80,6 @@ var app = new Vue({
           index == 4 ? (temp_priority[index] += 2.6) : temp_priority; //housing
           index == 5 ? (temp_priority[index] += 0) : temp_priority; //personal care
           index == 6 ? (temp_priority[index] += 1) : temp_priority; //savings
-
           index == 7 ? (temp_priority[index] -= 0) : temp_priority; //family
           index == 8 ? (temp_priority[index] += 1.3) : temp_priority; // misc
           index == 9 ? (temp_priority[index] += 1) : temp_priority; //gadgets
@@ -106,7 +97,6 @@ var app = new Vue({
           index == 4 ? (temp_priority[index] += 2) : temp_priority; //housing
           index == 5 ? (temp_priority[index] += 2) : temp_priority; //personal care
           index == 6 ? (temp_priority[index] += 0) : temp_priority; //savings
-
           index == 7 ? (temp_priority[index] -= 0) : temp_priority; //family
           index == 8 ? (temp_priority[index] += 1) : temp_priority; // misc
           index == 9 ? (temp_priority[index] += 1) : temp_priority; //gadgets
@@ -124,7 +114,6 @@ var app = new Vue({
           index == 4 ? (temp_priority[index] += 2.3) : temp_priority; //housing
           index == 5 ? (temp_priority[index] += 0) : temp_priority; //personal care
           index == 6 ? (temp_priority[index] += 1) : temp_priority; //savings
-
           index == 7 ? (temp_priority[index] += 1.5) : temp_priority; //family
           index == 8 ? (temp_priority[index] += 1) : temp_priority; // misc
           index == 9 ? (temp_priority[index] += 0) : temp_priority; //gadgets
@@ -142,7 +131,6 @@ var app = new Vue({
           index == 4 ? (temp_priority[index] += 2.1) : temp_priority; //housing
           index == 5 ? (temp_priority[index] += 0) : temp_priority; //personal care
           index == 6 ? (temp_priority[index] += 1) : temp_priority; //savings
-
           index == 7 ? (temp_priority[index] += 3) : temp_priority; //family
           index == 8 ? (temp_priority[index] += 0.8) : temp_priority; // misc
           index == 9 ? (temp_priority[index] += 0) : temp_priority; //gadgets
@@ -160,21 +148,20 @@ var app = new Vue({
           index == 4 ? (temp_priority[index] += 2.1) : temp_priority; //housing
           index == 5 ? (temp_priority[index] += 0) : temp_priority; //personal care
           index == 6 ? (temp_priority[index] += 0) : temp_priority; //savings
-
           index == 7 ? (temp_priority[index] += 6.3) : temp_priority; //family
           index == 8 ? (temp_priority[index] += 0) : temp_priority; // misc
           index == 9 ? (temp_priority[index] += 0) : temp_priority; //gadgets
         });
         this.priority = temp_priority;
       }
-
       this.calculator();
     },
 
     calculator: function() {
       this.categories.forEach((element, index) => {
-        const amount = (this.priority[index] / 100) * this.income;
-        element.amount = amount.toFixed(2);
+        let amount = (this.priority[index] / 100) * this.income;
+        amount = amount.toFixed(2);
+        element.amount = new Intl.NumberFormat("en").format(amount);
       });
     },
 
@@ -182,11 +169,8 @@ var app = new Vue({
       this.fullName = this.firstName + " " + this.lastName;
       !this.gender ? (this.sex = "Mr") : (this.sex = "Mrs");
       !this.status && this.gender ? (this.sex = "Miss") : this.sex;
-
-      // console.log(this.age);
       this.generator();
       this.generated = !this.generated;
-      // console.log(this.priority);
     },
     flip: function() {
       this.firstName = "";
@@ -200,6 +184,5 @@ var app = new Vue({
       this.gender = false;
       this.generated = !this.generated;
     }
-  },
-  computed: {}
+  }
 });
