@@ -8,7 +8,7 @@ var app = new Vue({
     income: 10000,
     // income: null,
     age: null,
-    dependants: "",
+    dependants: null,
 
     status: false,
     // false on the status is single
@@ -37,7 +37,7 @@ var app = new Vue({
   methods: {
     change: function() {
       this.message = "yooo";
-      console.log(this.status);
+      // console.log(this.status);
     },
 
     generator: function() {
@@ -186,7 +186,7 @@ var app = new Vue({
       // console.log(this.age);
       this.generator();
       this.generated = !this.generated;
-      console.log(this.priority);
+      // console.log(this.priority);
     },
     flip: function() {
       this.firstName = "";

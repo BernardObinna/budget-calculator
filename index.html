@@ -45,11 +45,13 @@
           <form @submit.prevent="submit" action="" class=" col s12">
             <div class="row">
               <div class="input-field col s12 l6">
-                <input id="first_name" v-model="firstName" type="text" class="validate" />
+                <input id="first_name" v-model="firstName" type="text" pattern="[A-za-z]+" class="validate"
+                  maxlength='18' required />
                 <label for="first_name">First Name</label>
               </div>
               <div class="input-field col s12 l6 ">
-                <input id="last_name" v-model="lastName" type="text" maxlength='10' class="validate" />
+                <input id="last_name" v-model="lastName" type="text" pattern="[A-za-z]+" class="validate" maxlength='18'
+                  required />
                 <label for="last_name">Last Name</label>
               </div>
             </div>
