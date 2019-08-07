@@ -4,8 +4,7 @@ var app = new Vue({
     firstName: "",
     lastName: "",
     fullName: "",
-    income: 10000,
-    // income: null,
+    income: null,
     age: null,
     dependants: null,
 
