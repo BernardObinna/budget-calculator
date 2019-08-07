@@ -179,7 +179,7 @@ var app = new Vue({
     },
 
     submit: function() {
-      this.client = this.firstName + " " + this.lastName;
+      this.fullName = this.firstName + " " + this.lastName;
       !this.gender ? (this.sex = "Mr") : (this.sex = "Mrs");
       !this.status && this.gender ? (this.sex = "Miss") : this.sex;
 
@@ -194,7 +194,7 @@ var app = new Vue({
       this.fullName = "";
       this.income = null;
       this.age = null;
-      this.dependants = "";
+      this.dependants = null;
 
       this.client = "";
       this.gender = false;
