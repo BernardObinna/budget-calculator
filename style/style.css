@@ -19,6 +19,10 @@ p {
   font-size: 1.4em !important;
 }
 
+.flipper > label {
+  color: black;
+}
+
 form {
   padding: 4% 10% !important;
 }
