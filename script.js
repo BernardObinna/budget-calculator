@@ -42,7 +42,7 @@ var app = new Vue({
 
     generator: function() {
       let temp_priority = [];
-      if (this.age < 25) {
+      if (this.age < 30) {
         this.priority.forEach((element, index) => {
           temp_priority[index] = element - 1;
           index == 0 ? (temp_priority[index] += 1.2) : temp_priority; //groceries
@@ -59,9 +59,8 @@ var app = new Vue({
         });
         this.priority = temp_priority;
       }
-      if (this.age > 30) {
+      if (this.age >= 30) {
         this.priority.forEach((element, index) => {
-          // temp_priority.push(element - 1);
           temp_priority[index] = element - 1;
 
           index == 0 ? (temp_priority[index] += 2.7) : temp_priority; //groceries
@@ -80,7 +79,6 @@ var app = new Vue({
       }
       if (this.status == true) {
         this.priority.forEach((element, index) => {
-          // temp_priority.push(element - 1);
           temp_priority[index] = element - 1;
 
           index == 0 ? (temp_priority[index] += 3) : temp_priority; //groceries
