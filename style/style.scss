@@ -11,13 +11,17 @@
   box-shadow: 0 3px 6px black;
 }
 
+h2 {
+  padding: 0 5%;
+}
+
 input,
 label,
 p {
   font-size: 1.4em !important;
 }
 
-.flipper>label {
+.flipper > label {
   color: black;
 }
 
@@ -38,11 +42,11 @@ nav {
   border-radius: 6px;
 }
 
-.flipSwitch:checked+.lever::after {
+.flipSwitch:checked + .lever::after {
   background-color: #ac20a1 !important;
 }
 
-.flipSwitch:checked+.lever {
+.flipSwitch:checked + .lever {
   background-color: rgba(172, 32, 160, 0.6) !important;
 }
 
