@@ -42,12 +42,20 @@ var app = new Vue({
 
     generator: function() {
       let temp_priority = [];
-      if (this.age < 30) {
+      if (this.age < 25) {
         this.priority.forEach((element, index) => {
           temp_priority.push(element - 1);
-          index == 5 ? (temp_priority[index] += 2) : temp_priority;
+          index == 0 ? (temp_priority[index] += 1.2) : temp_priority;
+          index == 1 ? (temp_priority[index] += 2) : temp_priority;
+          index == 2 ? (temp_priority[index] -= 2.5) : temp_priority;
+          index == 3 ? (temp_priority[index] -= 2.7) : temp_priority;
+          index == 4 ? (temp_priority[index] += 1) : temp_priority;
+          index == 5 ? (temp_priority[index] += 2.5) : temp_priority;
+          index == 6 ? (temp_priority[index] += 1.5) : temp_priority;
+
+          index == 7 ? (temp_priority[index] -= 2) : temp_priority;
           index == 8 ? (temp_priority[index] += 3) : temp_priority;
-          index == 9 ? (temp_priority[index] += 5) : temp_priority;
+          index == 9 ? (temp_priority[index] += 6) : temp_priority;
         });
         this.priority = temp_priority;
       }
@@ -64,7 +72,8 @@ var app = new Vue({
 
     calculator: function() {
       this.categories.forEach((element, index) => {
-        element.amount = (this.priority[index] / 100) * this.income;
+        const amount = (this.priority[index] / 100) * this.income;
+        element.amount = amount.toFixed(2);
       });
     },
 

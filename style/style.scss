@@ -1,82 +1,87 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .categoryCard {
-    //   background-color: #ac20a1;
-    padding: 20px;
-    margin: 40px;
-    border-radius: 6px;
-    box-shadow: 0 3px 6px black;
+  //   background-color: #ac20a1;
+  padding: 20px;
+  margin: 40px;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px black;
 }
 
 input,
 label,
 p {
-    font-size: 1.4em !important;
+  font-size: 1.4em !important;
 }
 
 form {
-    // padding: 0 50%;
-    padding: 4% 10% !important;
+  // padding: 0 50%;
+  padding: 4% 10% !important;
 }
 
 nav {
-    // text-align: center;
+  // text-align: center;
 
-    // height: 30%;
-    // padding
-    min-height: 100px;
-    background-color: #ac20a1;
+  // height: 30%;
+  // padding
+  min-height: 100px;
+  background-color: #ac20a1;
 }
 
 .submit {
-    color: #ac20a1;
-    font-weight: bold;
-    background-color: rgba(0, 0, 0, 0);
-    border: solid 1px #ac20a1;
-    border-radius: 6px;
+  color: #ac20a1;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0);
+  border: solid 1px #ac20a1;
+  border-radius: 6px;
 }
 
-.flipSwitch:checked+.lever::after {
-    background-color: #ac20a1 !important;
+.flipSwitch:checked + .lever::after {
+  background-color: #ac20a1 !important;
 }
 
-.flipSwitch:checked+.lever {
-    background-color: rgba(172, 32, 160, 0.6) !important;
+.flipSwitch:checked + .lever {
+  background-color: rgba(172, 32, 160, 0.6) !important;
 }
 
 input {
-    margin: 0 0 !important;
-    padding: 0 !important;
+  margin: 0 0 !important;
+  padding: 0 !important;
 }
 
 input.valid {
-    border-bottom: 1px solid #ac20a1 !important;
-    box-shadow: 0 1px 0 0 #ac20a1 !important;
+  border-bottom: 1px solid #ac20a1 !important;
+  box-shadow: 0 1px 0 0 #ac20a1 !important;
 }
 
 input:focus {
-    border-bottom: 1px solid #ac20a1 !important;
-    box-shadow: 0 1px 0 0 #ac20a1 !important;
+  border-bottom: 1px solid #ac20a1 !important;
+  box-shadow: 0 1px 0 0 #ac20a1 !important;
 }
 
 label.active {
-    color: #ac20a1 !important;
+  color: #ac20a1 !important;
 }
 
 .flipper {
-    margin: 30px 0;
+  margin: 30px 0;
 }
 
 .submit:hover {
-    color: white;
-    background-color: #ac20a1;
+  color: white;
+  background-color: #ac20a1;
 }
 
 .submit:focus {
-    color: white;
-    background-color: #ac20a1;
+  color: white;
+  background-color: #ac20a1;
+}
+
+.amount {
+  color: rgb(11, 104, 226);
+  // color: blue;
 }
