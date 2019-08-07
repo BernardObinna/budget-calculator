@@ -49,32 +49,35 @@
                 <label for="first_name">First Name</label>
               </div>
               <div class="input-field col s12 l6 ">
-                <input id="last_name" v-model="lastName" type="text" class="validate" />
+                <input id="last_name" v-model="lastName" type="text" maxlength='10' class="validate" />
                 <label for="last_name">Last Name</label>
               </div>
             </div>
 
             <div class="row">
               <div class="input-field col s12">
-                <input id="income" v-model="income" type="number" class="validate" required />
+                <input id="income" v-model="income" type="text" pattern="[0-9]+" class="validate" maxlength='20'
+                  required />
                 <label for="income">Income</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input id="age" v-model="age" type="number" class="validate" />
+                <input id="age" v-model="age" type="text" type="text" pattern="[0-9]+" class="validate" maxlength='3'
+                  required />
                 <label for="age">Age</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input id="dependants" v-model="dependants" type="number" class="validate" />
+                <input id="dependants" v-model="dependants" type="text" type="text" pattern="[0-9]+" class="validate"
+                  maxlength='2' />
                 <label for="dependants">No of dependants</label>
               </div>
             </div>
 
             <div class="row flipper">
-              <label class="col s12 l6 center">Married status</label>
+              <label class="col s12 l6 center">Marital status</label>
               <div class="switch col s12 l6 center">
                 <label>
                   Single
