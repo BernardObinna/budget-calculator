@@ -2,12 +2,24 @@ var app = new Vue({
   el: "#app",
   data: {
     message: "Hello Vue!",
+    firstName: "",
+    lastName: "",
+    fullName: "",
+    income: 10000,
+    // income: null,
+    age: null,
+    dependants: "",
+
     status: false,
     // false on the status is single
     gender: false,
     // false on the gender is male
-    generated: true,
+    sex: "",
+    generated: false,
     client: "John wick",
+
+    priority: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
+
     categories: [
       { name: "Groceries & Supplies", amount: 30000 },
       { name: "Transportation", amount: 25000 },
@@ -17,8 +29,8 @@ var app = new Vue({
       { name: "Personal Care", amount: 30000 },
       { name: "Savings & investments", amount: 30000 },
       { name: "Family & dependants", amount: 30000 },
-      { name: "Miscellaneous", amount: 30000 },
-      { name: "Emergency funds", amount: 30000 }
+      { name: "Miscellaneous eg entertainment", amount: 30000 },
+      { name: "Gadgets", amount: 30000 }
     ]
   },
 
@@ -26,6 +38,29 @@ var app = new Vue({
     change: function() {
       this.message = "yooo";
       console.log(this.status);
+    },
+
+    submit: function() {
+      this.client = this.firstName + " " + this.lastName;
+      !this.gender ? (this.sex = "Mr") : (this.sex = "Mrs");
+      !this.status && this.gender ? (this.sex = "Miss") : this.sex;
+
+      // console.log(this.age);
+      this.generator();
+      this.generated = !this.generated;
+      console.log(this.priority);
+    },
+    flip: function() {
+      this.firstName = "";
+      this.lastName = "";
+      this.fullName = "";
+      this.income = null;
+      this.age = null;
+      this.dependants = "";
+
+      this.client = "";
+      this.gender = false;
+      this.generated = !this.generated;
     }
   },
   computed: {}
