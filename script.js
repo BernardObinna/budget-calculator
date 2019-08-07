@@ -45,6 +45,15 @@ var app = new Vue({
       if (this.age < 30) {
         this.priority.forEach((element, index) => {
           temp_priority.push(element - 1);
+          index == 5 ? (temp_priority[index] += 2) : temp_priority;
+          index == 8 ? (temp_priority[index] += 3) : temp_priority;
+          index == 9 ? (temp_priority[index] += 5) : temp_priority;
+        });
+        this.priority = temp_priority;
+      }
+      if (this.age > 30) {
+        this.priority.forEach((element, index) => {
+          temp_priority.push(element - 1);
           index == 9 ? (temp_priority[index] += 10) : temp_priority;
         });
         this.priority = temp_priority;
