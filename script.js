@@ -5,15 +5,11 @@ var app = new Vue({
     lastName: "",
     fullName: "",
     income: null,
-    // income: 200000,
     age: null,
-    // age: 20,
     dependants: null,
 
     status: false,
-    // false on the status is single
     gender: false,
-    // false on the gender is male
     sex: "",
     generated: false,
     client: "John wick",
