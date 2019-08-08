@@ -109,7 +109,8 @@
       <div class="container">
         <div v-for="(category,index) in categories" :key="index" class="row categoryCard">
           <p class="col s12 l6 center">{{category.name}}</p>
-          <p class="col s12 l6 center amount">N{{category.amount}}</p>
+          <p class="col s6 l3 center amount">{{category.percentage}}%</p>
+          <p class="col s16 l3 center amount">N{{category.amount}}</p>
         </div>
         <div class="row col s12 center">
           <button class="btn-large waves-effect waves-light center submit" @click="flip" type="submit" name="action">

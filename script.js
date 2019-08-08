@@ -5,7 +5,9 @@ var app = new Vue({
     lastName: "",
     fullName: "",
     income: null,
+    // income: 200000,
     age: null,
+    // age: 20,
     dependants: null,
 
     status: false,
@@ -159,8 +161,10 @@ var app = new Vue({
     calculator: function() {
       this.categories.forEach((element, index) => {
         let amount = (this.priority[index] / 100) * this.income;
+        let percentage = this.priority[index];
         amount = amount.toFixed(2);
         element.amount = new Intl.NumberFormat("en").format(amount);
+        element.percentage = percentage;
       });
     },
 
