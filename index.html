@@ -48,8 +48,8 @@
 
             <div class="row">
               <div class="input-field col s12">
-                <input id="income" v-model="income" type="text" pattern="[0-9]+" autocomplete="off" class="validate"
-                  maxlength='15' required />
+                <input id="income" v-model="income" type="text" pattern="^[1-9][0-9]+|[1-9]+" autocomplete="off"
+                  class="validate" maxlength='15' required />
                 <label for="income">Income</label>
               </div>
             </div>
@@ -109,8 +109,8 @@
       <div class="container">
         <div v-for="(category,index) in categories" :key="index" class="row categoryCard">
           <p class="col s12 l6 center">{{category.name}}</p>
-          <p class="col s6 l3 center amount">{{category.percentage}}%</p>
-          <p class="col s16 l3 center amount">N{{category.amount}}</p>
+          <p class="col s1 l3 center amount">{{category.percentage}}%</p>
+          <p class="col s11 l3 center amount">N{{category.amount}}</p>
         </div>
         <div class="row col s12 center">
           <button class="btn-large waves-effect waves-light center submit" @click="flip" type="submit" name="action">
